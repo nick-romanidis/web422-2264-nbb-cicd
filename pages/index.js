@@ -6,8 +6,8 @@ export default function Home() {
     <>
       <h1>Vehicles UI</h1>
       <p>
-        A small app we will test this week (week 12). It has a public home page,
-        a login form, and a protected vehicles list.
+        A small app we will test this week. It has a public home page, a login
+        form, and a protected vehicles list.
       </p>
 
       <p>Here is a little component with some behaviour worth unit-testing:</p>
