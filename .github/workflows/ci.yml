@@ -30,3 +30,11 @@ jobs:
           build: npm run build
           start: npm start
           wait-on: "http://localhost:3000"
+
+      - name: Upload Cypress screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          if-no-files-found: ignore
