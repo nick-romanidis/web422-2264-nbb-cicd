@@ -19,3 +19,14 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
+
+      - name: Run Jest tests
+        run: npm run test:ci
+
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          install: false
+          build: npm run build
+          start: npm start
+          wait-on: "http://localhost:3000"
